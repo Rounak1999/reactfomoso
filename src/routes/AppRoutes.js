@@ -30,6 +30,11 @@ const AppRoutes = {
     },
     {
       exact: true,
+      path: PATH_APP.main.screens,
+      component: lazy(() => import('src/views/uikit/extra-components/CarouselView'))
+    },
+    {
+      exact: true,
       path: PATH_APP.root,
       component: () => <Redirect to={PATH_APP.main.root} />
     },
@@ -38,9 +43,40 @@ const AppRoutes = {
     // ----------------------------------------------------------------------
     {
       exact: true,
-      path: PATH_APP.management.eCommerce.products,
+      path: PATH_APP.management.eCommerce.products_normal,
       component: lazy(() => import('~/views/e-commerce/ShopView'))
     },
+    {
+      exact: true,
+      path: PATH_APP.management.eCommerce.products_normals,
+      component: lazy(() => import('~/views/e-commerce/ShopView'))
+    },
+
+    // client menu
+    {
+      exact: true,
+      path: PATH_APP.management.eCommerce.products,
+      component: lazy(() => import('~/views/user/UserCardClient'))
+    },
+    {
+      exact: true,
+      path: PATH_APP.management.user.accountClient,
+      component: lazy(() => import('~/views/user/AccountViewClient'))
+    },
+
+    {
+      exact: true,
+      path: PATH_APP.management.user.team,
+      component: lazy(() => import('~/views/user/Team'))
+    },
+
+    {
+      exact: true,
+      path: PATH_APP.management.user.audience,
+      component: lazy(() => import('~/views/user/Audience'))
+    },
+
+    // close client menu
     {
       exact: true,
       path: PATH_APP.management.eCommerce.product,
@@ -72,7 +108,7 @@ const AppRoutes = {
     {
       exact: true,
       path: PATH_APP.management.blog.root,
-      component: lazy(() => import('~/views/blog/BlogView'))
+      component: lazy(() => import('~/views/user/UserCardVendor'))
     },
     {
       exact: true,
@@ -95,7 +131,7 @@ const AppRoutes = {
     {
       exact: true,
       path: PATH_APP.management.user.cards,
-      component: lazy(() => import('~/views/user/UserCardsView'))
+      component: lazy(() => import('~/views/user/UserCard'))
     },
     {
       exact: true,

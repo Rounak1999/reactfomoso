@@ -186,12 +186,12 @@ function ShopView() {
 
       <Container>
         <HeaderDashboard
-          heading="Shop"
+          heading=""
           links={[
             { name: 'Dashboard', href: PATH_APP.root },
             { name: 'Management', href: PATH_APP.management.root },
-            { name: 'E-Commerce', href: PATH_APP.management.eCommerce.root },
-            { name: 'Shop' }
+            // { name: 'E-Commerce', href: PATH_APP.management.eCommerce.root },
+            // { name: 'Shop' }
           ]}
         />
 
@@ -213,14 +213,14 @@ function ShopView() {
             flexWrap: 'wrap-reverse'
           }}
         >
-          <ChipFiltered
+          {/* <ChipFiltered
             filters={filters}
             formik={formik}
             isShowReset={openFilter}
             onResetFilter={handleResetFilter}
-          />
+          /> */}
 
-          <Box sx={{ display: 'flex', flexShrink: 0 }}>
+          {/* <Box sx={{ display: 'flex', flexShrink: 0 }}>
             <DrawerFilter
               formik={formik}
               genderOptions={FILTER_GENDER_OPTIONS}
@@ -238,14 +238,14 @@ function ShopView() {
               onSortBy={handleSortBy}
               sortByOptions={SORT_BY_OPTIONS}
             />
-          </Box>
+          </Box> */}
         </Box>
 
         <ProductList
           products={filteredProducts}
           isLoad={!filteredProducts && !initialValues}
         />
-        <CartWidget length={totalItems} />
+        {/* <CartWidget length={totalItems} /> */}
       </Container>
     </Page>
   );

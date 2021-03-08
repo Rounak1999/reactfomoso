@@ -37,9 +37,10 @@ export const PATH_APP = {
   root: ROOTS.app,
   main: {
     root: path(ROOTS.app, '/dashboard'),
-    dashboard: path(ROOTS.app, '/dashboard'),
+    dashboard: path(ROOTS.app, '/dashboard/'),
     ecommerce: path(ROOTS.app, '/dashboard/ecommerce'),
-    analytics: path(ROOTS.app, '/dashboard/analytics')
+    analytics: path(ROOTS.app, '/dashboard/analytics'),
+    screens:path(ROOTS.app,"/dashboard/screens")
   },
   app: {
     mail: {
@@ -67,14 +68,20 @@ export const PATH_APP = {
       profile: path(ROOTS.app, '/management/user/profile'),
       cards: path(ROOTS.app, '/management/user/card'),
       list: path(ROOTS.app, '/management/user/list'),
-      account: path(ROOTS.app, '/management/user/account')
+      account: path(ROOTS.app, '/management/user/account'),
+      accountClient:path(ROOTS.app, '/management/user/account/accountClient'),
+      team:path(ROOTS.app, '/management/user/team'),
+      audience:path(ROOTS.app, '/management/user/audience')
     },
     eCommerce: {
       root: path(ROOTS.app, '/management/e-commerce'),
       products: path(ROOTS.app, '/management/e-commerce/products'),
+      products_normal:path(ROOTS.app, '/management/e-commerce/products_normal'),
+      products_normals:path(ROOTS.app, '/management/e-commerce/products_normals'),
       product: path(ROOTS.app, '/management/e-commerce/product/:name'),
       productById: path(
         ROOTS.app,
+
         '/management/e-commerce/product/nike-air-force-1-ndestrukt'
       ),
       list: path(ROOTS.app, '/management/e-commerce/list'),

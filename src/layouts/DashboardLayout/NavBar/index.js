@@ -185,7 +185,7 @@ function NavBar({ isOpenNav, onCloseNav }) {
         </List>
       ))}
 
-      <Box sx={{ px: 2.5, pb: 3, mt: 10 }}>
+      {/* <Box sx={{ px: 2.5, pb: 3, mt: 10 }}>
         <div className={classes.doc}>
           <Box
             component="img"
@@ -214,6 +214,7 @@ function NavBar({ isOpenNav, onCloseNav }) {
           </Button>
         </div>
       </Box>
+  */}
     </Scrollbars>
   );
 

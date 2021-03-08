@@ -55,13 +55,13 @@ function CarouselView() {
           heading="Carousel"
           links={[
             { name: 'Dashboard', href: PATH_APP.root },
-            { name: 'Carousel' }
+            { name: 'Screens' }
           ]}
-          moreLink="https://react-slick.neostack.com"
+          // moreLink="https://react-slick.neostack.com"
         />
 
         <Grid container spacing={3}>
-          <Grid item xs={12} md={6}>
+          {/* <Grid item xs={12} md={6}>
             <Card className={classes.margin}>
               <CardHeader title="Carousel Basic 1" />
               <CardContent>
@@ -95,7 +95,7 @@ function CarouselView() {
                 <CarouselBasic4 carousels={CAROUSELS} />
               </CardContent>
             </Card>
-          </Grid>
+          </Grid> */}
 
           <Grid item xs={12}>
             <Card className={classes.margin}>

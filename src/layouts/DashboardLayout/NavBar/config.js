@@ -38,20 +38,22 @@ export default [
         title: 'home',
         icon: ICONS.dashboard,
         href: PATH_APP.main.root,
-        items: [
-          {
-            title: 'screens',
-            href: PATH_APP.main.root
-          },
-          {
-            title: 'campaigns',
-            href: PATH_APP.main.ecommerce
-          },
-          {
-            title: 'analytics',
-            href: PATH_APP.main.analytics
-          }
-        ]
+        // items: []
+      },
+      {
+        title: 'Screens',
+        icon: ICONS.dashboard,  
+        href: PATH_APP.main.screens
+      },
+      {
+        title: 'campaigns',
+        icon: ICONS.dashboard,
+        href: PATH_APP.main.ecommerce
+      },
+      {
+        title: 'analytics',
+        icon: ICONS.dashboard,  
+        href: PATH_APP.main.analytics
       }
     ]
   },
@@ -64,25 +66,25 @@ export default [
       {
         title: 'users',
         icon: ICONS.user,
-        href: PATH_APP.management.user.root,
-        items: [
-          {
-            title: 'profile',
-            href: PATH_APP.management.user.profile
-          },
-          {
-            title: 'cards',
-            href: PATH_APP.management.user.cards
-          },
-          {
-            title: 'list',
-            href: PATH_APP.management.user.list
-          },
-          {
-            title: 'account',
-            href: PATH_APP.management.user.account
-          }
-        ]
+        href: PATH_APP.management.user.cards,
+        // items: [
+        //   {
+        //     title: 'profile',
+        //     href: PATH_APP.management.user.profile
+        //   },
+        //   {
+        //     title: 'cards',
+        //     href: PATH_APP.management.user.cards
+        //   },
+        //   {
+        //     title: 'list',
+        //     href: PATH_APP.management.user.list
+        //   },
+        //   {
+        //     title: 'account',
+        //     href: PATH_APP.management.user.account
+        //   }
+        // ]
       },
 
       // MANAGEMENT : E-COMMERCE
@@ -91,28 +93,28 @@ export default [
         title: 'clients',
         icon: ICONS.cart,
         href: PATH_APP.management.eCommerce.root,
-        items: [
-          {
-            title: 'shop',
-            href: PATH_APP.management.eCommerce.products
-          },
-          {
-            title: 'product',
-            href: PATH_APP.management.eCommerce.productById
-          },
-          {
-            title: 'list',
-            href: PATH_APP.management.eCommerce.list
-          },
-          {
-            title: 'checkout',
-            href: PATH_APP.management.eCommerce.checkout
-          },
-          {
-            title: 'invoice',
-            href: PATH_APP.management.eCommerce.invoice
-          }
-        ]
+        // items: [
+        //   {
+        //     title: 'shop',
+        //     href: PATH_APP.management.eCommerce.products
+        //   },
+        //   {
+        //     title: 'product',
+        //     href: PATH_APP.management.eCommerce.productById
+        //   },
+        //   {
+        //     title: 'list',
+        //     href: PATH_APP.management.eCommerce.list
+        //   },
+        //   {
+        //     title: 'checkout',
+        //     href: PATH_APP.management.eCommerce.checkout
+        //   },
+        //   {
+        //     title: 'invoice',
+        //     href: PATH_APP.management.eCommerce.invoice
+        //   }
+        // ]
       },
 
       // MANAGEMENT : BLOG
@@ -121,55 +123,55 @@ export default [
         title: 'vendors',
         icon: ICONS.blog,
         href: PATH_APP.management.blog.root,
-        items: [
-          {
-            title: 'posts',
-            href: PATH_APP.management.blog.root
-          },
-          {
-            title: 'post',
-            href: PATH_APP.management.blog.postById
-          },
-          {
-            title: 'new post',
-            href: PATH_APP.management.blog.newPost
-          }
+        // items: [
+        //   {
+        //     title: 'posts',
+        //     href: PATH_APP.management.blog.root
+        //   },
+        //   {
+        //     title: 'post',
+        //     href: PATH_APP.management.blog.postById
+        //   },
+        //   {
+        //     title: 'new post',
+        //     href: PATH_APP.management.blog.newPost
+        //   }
           
-        ]
+        // ]
       },
-      {
-        title: 'finance',
-        href: PATH_APP.app.mail.root,
-        icon: ICONS.mail
-      },
+      // {
+      //   title: 'finance',
+      //   href: PATH_APP.app.mail.root,
+      //   icon: ICONS.mail
+      // },
       {
         title: 'backups',
-        href: PATH_APP.app.chat.root,
+        href: PATH_APP.components.timeline,
         icon: ICONS.chat
       },
       {
         title: 'audience',
-        href: PATH_APP.app.calendar,
+        href: PATH_APP.management.user.audience,
         icon: ICONS.calendar
       },
       {
         title: 'media',
-        href: '/',
+        href: PATH_APP.management.eCommerce.products_normal,
         icon: ICONS.page
       },
       {
         title: 'integration',
-        href: PATH_PAGE.pricing,
+        href: PATH_APP.management.eCommerce.products_normals,
         icon: ICONS.page
       },
       {
         title: 'team',
-        href: PATH_PAGE.payment,
+        href: PATH_APP.management.user.team,
         icon: ICONS.page
       },
       {
         title: 'logout',
-        href: PATH_PAGE.payment,
+        href: "/",
         icon: ICONS.page
       }
     ]

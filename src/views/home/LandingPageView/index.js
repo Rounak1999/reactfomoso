@@ -34,15 +34,9 @@ function LandingPageView() {
 
   return (
     
-    <LoginView />
-
-  );
-}
-
-export default LandingPageView;
-
-// <Page title="Minimal | Home" id="move_top" className={classes.root}>
-      {/* <Hero />
+    // <LoginView />
+    <Page title="Minimal | Home" id="move_top" className={classes.root}>
+     <Hero />
       <RouterLink to="http://localhost:3000/auth/login"/>
       <div className={classes.content}>
         <Minimal />
@@ -51,5 +45,11 @@ export default LandingPageView;
         <CleanInterfaces />
         <Advertisement />
         <Footer />
-      </div> */}
-    // </Page>
+      </div> 
+     </Page>
+
+  );
+}
+
+export default LandingPageView;
+

@@ -183,11 +183,11 @@ function CarouselThumbnail({ carousels, className, ...other }) {
         }}
         className={classes.thumbList}
       >
-        <Slider {...settings2} asNavFor={nav1} ref={slider2}>
+        {/* <Slider {...settings2} asNavFor={nav1} ref={slider2}>
           {carousels.map(item => (
             <ThumbnailItem key={item} item={item} />
           ))}
-        </Slider>
+        </Slider> */}
       </Box>
     </div>
   );

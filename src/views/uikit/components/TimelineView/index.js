@@ -95,18 +95,18 @@ function TimelineView() {
     <Page title="Components | Timeline" className={classes.root}>
       <Container maxWidth="lg">
         <HeaderDashboard
-          heading="Timeline"
+          heading="Back Up"
           links={[
             { name: 'Dashboard', href: PATH_APP.root },
             { name: 'Components', href: PATH_APP.components.root },
             { name: 'Timeline' }
           ]}
-          moreLink="https://next.material-ui.com/components/timeline"
+          // moreLink="https://next.material-ui.com/components/timeline"
         />
         <Card>
           <CardContent>
             <Grid container spacing={5}>
-              <Grid item xs={12} md={4}>
+              {/* <Grid item xs={12} md={4}>
                 <Block title="Default">
                   <Timeline>
                     {reduceTimeLine.map(item => (
@@ -120,9 +120,9 @@ function TimelineView() {
                     ))}
                   </Timeline>
                 </Block>
-              </Grid>
+              </Grid> */}
 
-              <Grid item xs={12} md={4}>
+              {/* <Grid item xs={12} md={4}>
                 <Block title="Right">
                   <Timeline align="right">
                     {reduceTimeLine.map(item => (
@@ -136,9 +136,9 @@ function TimelineView() {
                     ))}
                   </Timeline>
                 </Block>
-              </Grid>
+              </Grid> */}
 
-              <Grid item xs={12} md={4}>
+              {/* <Grid item xs={12} md={4}>
                 <Block title="Alternating">
                   <Timeline align="alternate">
                     {reduceTimeLine.map(item => (
@@ -152,9 +152,9 @@ function TimelineView() {
                     ))}
                   </Timeline>
                 </Block>
-              </Grid>
+              </Grid> */}
 
-              <Grid item xs={12} md={4}>
+              {/* <Grid item xs={12} md={4}>
                 <Block title="Filled">
                   <Timeline align="alternate">
                     {TIMELINES.map(item => (
@@ -168,9 +168,9 @@ function TimelineView() {
                     ))}
                   </Timeline>
                 </Block>
-              </Grid>
+              </Grid> */}
 
-              <Grid item xs={12} md={4}>
+              {/* <Grid item xs={12} md={4}>
                 <Block title="Outlined">
                   <Timeline align="alternate">
                     {TIMELINES.map(item => (
@@ -207,10 +207,10 @@ function TimelineView() {
                     ))}
                   </Timeline>
                 </Block>
-              </Grid>
+              </Grid> */}
 
               <Grid item xs={12}>
-                <Block title="Customized">
+                <Block title="Backup Details">
                   <Timeline align="alternate">
                     {TIMELINES.map(item => (
                       <TimelineItem key={item.key}>

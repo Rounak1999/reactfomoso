@@ -46,21 +46,21 @@ function LoginForm({ formik }) {
   const [ischeck,set_ischeck]=React.useState("")
   
   const submit = async ()=>{
-    window.location.href = "/app/dashboard"
-    let a = await axios.post("http://52.66.114.97:4000/admin/adminlogin",{
-        email:email,
-        password:password
-    })
+    // window.location.href = "/app/dashboard"
+    // let a = await axios.post("http://52.66.114.97:4000/admin/adminlogin",{
+    //     email:email,
+    //     password:password
+    // })
 
-     if(a.status==200){
-         localStorage.setItem("admin",a.data.token)
-         set_ischeck(a.data)
+    //  if(a.status==200){
+    //      localStorage.setItem("admin",a.data.token)
+    //      set_ischeck(a.data)
           
-         // history.push("/notes")
-     }else{
-         alert(a.data)
-     }
-    console.log("data after login",a)
+    //      // history.push("/notes")
+    //  }else{
+    //      alert(a.data)
+    //  }
+    // console.log("data after login",a)
 }
 const get_login=()=>{
   let login=localStorage.getItem("admin")
@@ -78,97 +78,84 @@ React.useEffect(()=>{
   return (
     
     <FormikProvider value={formik}>
-    
-    
-     <div>
-      <form autoComplete="off" noValidate onSubmit={(e)=>{e.preventDefault();submit()}}>
-        <TextField
-          fullWidth
-          type="email"
-          label="Email address"
-          onChange={(e)=>{set_email(e.target.value)}}
-          //{...getFieldProps('email')}
-          error={
-            Boolean(touched.email && errors.email) ||
-            emailError(errors.afterSubmit).error
+    <Form autoComplete="off" noValidate onSubmit={handleSubmit}>
+      <TextField
+        fullWidth
+        type="email"
+        label="Email address"
+        {...getFieldProps('email')}
+        error={
+          Boolean(touched.email && errors.email) ||
+          emailError(errors.afterSubmit).error
+        }
+        helperText={
+          (touched.email && errors.email) ||
+          emailError(errors.afterSubmit).helperText
+        }
+      />
+      <Box sx={{ mb: 3 }} />
+      <TextField
+        fullWidth
+        type={showPassword ? 'text' : 'password'}
+        label="Password"
+        {...getFieldProps('password')}
+        InputProps={{
+          endAdornment: (
+            <InputAdornment>
+              <IconButton onClick={handleShowPassword} edge="end">
+                <Icon icon={showPassword ? eyeFill : eyeOffFill} />
+              </IconButton>
+            </InputAdornment>
+          )
+        }}
+        error={
+          Boolean(touched.password && errors.password) ||
+          passwordError(errors.afterSubmit).error
+        }
+        helperText={
+          (touched.password && errors.password) ||
+          passwordError(errors.afterSubmit).helperText
+        }
+      />
+      <Box
+        sx={{
+          my: 2,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between'
+        }}
+      >
+        <FormControlLabel
+          control={
+            <Checkbox
+              {...getFieldProps('remember')}
+              checked={values.remember}
+            />
           }
-          helperText={
-            (touched.email && errors.email) ||
-            emailError(errors.afterSubmit).helperText
-          }
+          label="Remember me"
         />
-        <Box sx={{ mb: 3 }} />
-        <TextField
-          fullWidth
-          type={showPassword ? 'text' : 'password'}
-          label="Password"
-          onChange={(e)=>{set_password(e.target.value)}}
-          //{...getFieldProps('password')}
-          InputProps={{
-            endAdornment: (
-              <InputAdornment>
-                <IconButton onClick={handleShowPassword} edge="end">
-                  <Icon icon={showPassword ? eyeFill : eyeOffFill} />
-                </IconButton>
-              </InputAdornment>
-            )
-          }}
-          error={
-            Boolean(touched.password && errors.password) ||
-            passwordError(errors.afterSubmit).error
-          }
-          helperText={
-            (touched.password && errors.password) ||
-            passwordError(errors.afterSubmit).helperText
-          }
-        />
-        <Box
-          sx={{
-            my: 2,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between'
-          }}
+
+        <Link
+          variant="subtitle2"
+          to={PATH_PAGE.auth.resetPassword}
+          component={RouterLink}
         >
-          <FormControlLabel
-            control={
-              <Checkbox
-                {...getFieldProps('remember')}
-                checked={values.remember}
-              />
-            }
-            label="Remember me"
-          />
+          Forgot password?
+        </Link>
+      </Box>
 
-          <Link
-            variant="subtitle2"
-            to={PATH_PAGE.auth.resetPassword}
-            component={RouterLink}
-          >
-            Forgot password?
-          </Link>
-        </Box>
+      <LoadingButton
+        fullWidth
+        size="large"
+        type="submit"
+        variant="contained"
+        pending={isSubmitting}
+      >
+        Login
+      </LoadingButton>
+    </Form>
+  </FormikProvider>
 
-        <LoadingButton
-          fullWidth
-          size="large"
-          type="submit"
-          variant="contained"
-          pending={isSubmitting}
-        >
-          Login
-        </LoadingButton>
-
-      </form>
-      </div>
-
-      <div>
-
-      </div>
-  
-    
-    </FormikProvider>
-    
   );
 }
 

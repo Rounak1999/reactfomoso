@@ -243,16 +243,16 @@ function General({ className }) {
                     </Grid>
 
                     <Grid item xs={12}>
-                      {/* <TextField
+                      <TextField
                         {...getFieldProps('about')}
                         fullWidth
                         multiline
                         minRows={4}
                         maxRows={4}
                         label="About"
-                      /> */}
+                      />
                       {/* const [check,set_check]=React.useState({first:true,secound:false,third:true,fourth:false}) */}
-
+{/* 
                       <FormControlLabel
                         control={
                           <GreenCheckbox
@@ -346,7 +346,7 @@ function General({ className }) {
                           />
                         }
                         label="Finance"
-                      />
+                      /> */}
                     </Grid>
                   </Grid>
 
